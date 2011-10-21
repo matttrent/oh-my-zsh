@@ -54,7 +54,8 @@ url = CloudApp::Item.create(:upload, {:file => ARGV[0]}).url
 puts "Uploaded to #{url}."
 
 # Get the embed link.
-url = "#{url}/#{ARGV[0].split('/').last}"
+# url = "#{url}/#{ARGV[0].split('/').last}"
+url = "#{url}"
 
 # Copy it to your (Mac's) clipboard.
 `echo '#{url}' | tr -d "\n" | pbcopy`
